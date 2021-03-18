@@ -7,11 +7,10 @@ see their streak.
 After cloning this git repository to your local desktop:
 
 1. First, run the requirements.txt file in the directory to install all the
-dependencies. If you are using pip, run   
-
- `pip install -r requirements.txt`
-
- Alternatively, you can also download these dependencies manually:   
+dependencies.
+> If you are using pip, run   
+> `pip install -r requirements.txt`
+> Alternatively, you can also download these dependencies manually:   
 
  ```
  Flask_RESTful==0.3.8
