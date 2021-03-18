@@ -9,17 +9,17 @@ After cloning this git repository to your local desktop:
 1. First, run the requirements.txt file in the directory to install all the
 dependencies.
 
-  If you are using pip, run   
-  `pip install -r requirements.txt`  
+    If you are using pip, run   
+    `pip install -r requirements.txt`  
 
-  Alternatively, you can also download these dependencies manually:   
+    Alternatively, you can also download these dependencies manually:   
 
-   ```
-   Flask_RESTful==0.3.8
-   Flask==1.1.2
-   requests==2.25.1
-   Flask_HTTPAuth==4.2.0
-   ```
+     ```
+     Flask_RESTful==0.3.8
+     Flask==1.1.2
+     requests==2.25.1
+     Flask_HTTPAuth==4.2.0
+     ```
 
 2. In the directory, run   
 
