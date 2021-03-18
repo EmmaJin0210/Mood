@@ -68,8 +68,9 @@ I would do several things differently:
     credentials.   
 
     In a production application, I would make use of built-in features such as
-    flask-login that, together with frontend HTML, renders login forms to users.   
-    
+    flask-login that, together with frontend HTML, renders login forms to users,
+    and also allows users to manually logout, etc.   
+
     To protect user security, I would also use some kind of password hash (e.g.
     werkzeug) to ensure that we are not storing the actual password. I will also
     generate a token that expires after e.g. 30 minutes, so an inactive user does
