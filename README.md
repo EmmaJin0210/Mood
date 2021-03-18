@@ -1,6 +1,6 @@
 # Mood
 This is a small backend REST API that allows users to post their mood values and
-see their streak.
+see their posting streak.
 --------------------------------------------------------------------------------
 ### How to run this application:
 
@@ -80,11 +80,18 @@ I would do several things differently:
 3. **Database**   
 
     As this is not yet a deployed service and only runs locally, I am only keeping
-    track of the "current_user" on the local machine.
+    track of the "current_user" on the local machine. I am also only storing the
+    latest POSTed value instead of all the values. If this were a production
+    application, I would want to utilize flask_login to keep track of logged in
+    users and also store all values POSTed by each user.
 
-    If the application needed to handle more users:
-    First of all, I would use a database such as flask_sqlalchemy, instead of a
+    If the application needed to handle more users:   
+
+    I would use a database such as flask_sqlalchemy, instead of a
     simple Python dictionary, so user data can be stored more permanently in a
-    configurable database, instead of just in memory. Afterwards, I would also
-    create user models in a models.py, so that we can store the information of
-    each user in a more organized fashion.
+    configurable database, instead of just in memory.    
+
+    If the application needed to handle more data:   
+
+    I would create a user model and other models as needed in a models.py, so
+    that we can store the information of each user in a more organized fashion.
