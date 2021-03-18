@@ -48,27 +48,16 @@ I would do several things differently:
 
     <pre>
     |----moodapp/   
-
     |     |----init.py   
-
     |     |----db.py   
-
     |     |----auth.py   
-
     |     |----mood.py   
-
     |     |----templates/   
-
     |     |     |----base.html   
-
     |     |     |----auth/   
-
     |     |     |----mood/   
-
     |     -----static/   
-
     |----tests/   
-
     |----venv/   
     |----setup.py
     </pre>
