@@ -48,28 +48,28 @@ I would do several things differently:
 
     |----moodapp/   
 
-    |     |----init.py   
+    |<br />|----init.py   
 
-    |     |----db.py   
+    |<br />|----db.py   
 
-    |     |----auth.py   
+    |<br />|----auth.py   
 
-    |     |----mood.py   
+    |<br />|----mood.py   
 
-    |     |----templates/   
+    |<br />|----templates/   
 
-    |     |     |----base.html   
+    |<br />|<br />|----base.html   
 
-    |     |     |----auth/   
+    |<br />|<br />|----auth/   
 
-    |     |     |----mood/   
+    |<br />|<br />|----mood/   
 
-    |     -----static/   
+    |<br />-----static/   
 
     |----tests/   
 
     |----venv/   
-    
+
     |----setup.py
 
 2. **Authentication**   
