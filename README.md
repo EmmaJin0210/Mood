@@ -43,7 +43,22 @@ I would do several things differently:
 
     As this assessment is only a small backend REST API, I only created one main file.
     If this were a full production application with both frontend and backend, I would
-    utilize a structure like this:
+    utilize create more modules and files, organize the application with blueprints,
+    and the overall application would have a structure like this:   
+
+    |----moodapp/
+    |     |----init.py
+    |     |----db.py
+    |     |----auth.py
+    |     |----mood.py
+    |     |----templates/
+    |     |     |----base.html
+    |     |     |----auth/
+    |     |     |----mood/
+    |     -----static/
+    |----tests/
+    |----venv/
+    |----setup.py
 
 2. **Authentication**   
 
@@ -53,11 +68,10 @@ I would do several things differently:
     credentials.   
 
     In a production application, I would make use of built-in features such as
-    Flask Login that, together with frontend HTML, 
-
-
+    flask-login that, together with frontend HTML, renders login forms to users.   
+    
     To protect user security, I would also use some kind of password hash (e.g.
-    werkzeug to ensure that we are not storing the actual password. I will also
+    werkzeug) to ensure that we are not storing the actual password. I will also
     generate a token that expires after e.g. 30 minutes, so an inactive user does
     not stay logged in.
 
@@ -68,5 +82,7 @@ I would do several things differently:
     track of the "current_user" on the local machine.
 
     If the application needed to handle more users:
-    First of all, I would use a database such as SQLLite or MangoDB, instead of a
-    simple Python dictionary.
+    First of all, I would use a database such as flask_sqlalchemy, instead of a
+    simple Python dictionary, so user data can be stored more permanently in a
+    configurable database, instead of just in memory. Afterwards, I would also
+    create user models in a models.py.

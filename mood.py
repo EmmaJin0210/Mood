@@ -113,10 +113,10 @@ def update_streak(user):
     """
     current = datetime.date.today()
     latest = USER_DATA[user]["latest"]
-    if current != latest:
-        if check_streak(current, latest):
+    if current != latest: # if requests not on the same day, check
+        if check_streak(current, latest): # if two consecutive days
             USER_DATA[user]["streak"] += 1
-        else:
+        else: # if not two consecutive days, reset streak
             USER_DATA[user]["streak"] = 0
     USER_DATA[user]["latest"] = datetime.date.today()
 
@@ -129,12 +129,12 @@ def check_streak(current, latest):
     returns: True if we should append streak by 1,
              False if we should reset streak to 0
     """
-    if latest == None:
+    if latest == None: # if this is 1st POST, then streak will be 1
         return True
     d = datetime.timedelta(days=1)
-    if current == latest + d:
+    if current == latest + d: # if two consecutive days
         return True
-    else:
+    else: # if not two consecutive days
         return False
 
 ################################################################################
