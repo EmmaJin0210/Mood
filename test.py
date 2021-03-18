@@ -32,7 +32,7 @@ def anonymous(mood):
 # When logged in users POST a mood, it is stored and their streak is updated
 # When they perform a GET, they will see the mood they last posted and their streak
 def loggedin_user(username, password, mood):
-    print("Log in as %s, POST and GET with credentials" % username)
+    print("Try to log in as %s, POST and GET with credentials" % username)
 
     response = requests.post(BASE + "mood", {"mood": mood}, \
                auth=HTTPBasicAuth(username, password))
@@ -52,6 +52,10 @@ def main():
     # Test POSTing and GETing for anonymous users (not logged in)
     print("--------------------------anonymous user----------------------------")
     anonymous(8)
+    print()
+
+    print("-------------------------wrong credentials--------------------------")
+    loggedin_user('admi','xxxxxx', 6)
     print()
 
     # Test POSTing and GETing when logged in as 'admin'
