@@ -86,4 +86,5 @@ I would do several things differently:
     First of all, I would use a database such as flask_sqlalchemy, instead of a
     simple Python dictionary, so user data can be stored more permanently in a
     configurable database, instead of just in memory. Afterwards, I would also
-    create user models in a models.py.
+    create user models in a models.py, so that we can store the information of
+    each user in a more organized fashion.
