@@ -70,7 +70,6 @@ I would do several things differently:
     |----tests/   
 
     |----venv/   
-
     |----setup.py
     </pre>
 
