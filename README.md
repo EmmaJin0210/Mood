@@ -46,18 +46,30 @@ I would do several things differently:
     utilize create more modules and files, organize the application with blueprints,
     and the overall application would have a structure like this:   
 
-    |----moodapp/
-    |     |----init.py
-    |     |----db.py
-    |     |----auth.py
-    |     |----mood.py
-    |     |----templates/
-    |     |     |----base.html
-    |     |     |----auth/
-    |     |     |----mood/
-    |     -----static/
-    |----tests/
-    |----venv/
+    |----moodapp/   
+
+    |     |----init.py   
+
+    |     |----db.py   
+
+    |     |----auth.py   
+
+    |     |----mood.py   
+
+    |     |----templates/   
+
+    |     |     |----base.html   
+
+    |     |     |----auth/   
+
+    |     |     |----mood/   
+
+    |     -----static/   
+
+    |----tests/   
+
+    |----venv/   
+    
     |----setup.py
 
 2. **Authentication**   
